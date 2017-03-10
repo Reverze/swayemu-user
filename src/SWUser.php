@@ -125,6 +125,7 @@ class SWUser
 
 
     /**
+     * Represents xa user
      * @var XA\PlatformClient\Controller\User\XAUser
      */
     private $xaUser = null;
@@ -133,11 +134,18 @@ class SWUser
     public function __construct()
     {
         if (empty($this->xaUser)){
-
+            $this->xaUser = $this->createXAUser();
         }
     }
 
-
+    /*
+     * Creates a new XAUser instance
+     */
+    private function createXAUser() : XAUser
+    {
+        $xaUser = new XAUser(\SWUserCore::getUserEnvironment(), \SWUserCore::getUserEnvironment());
+        return $xaUser;
+    }
 
 
 
