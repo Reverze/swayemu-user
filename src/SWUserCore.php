@@ -3,8 +3,19 @@
 use XA\PlatformClient;
 
 
-class SWBootloader
+class SWUserCore
 {
+    /**
+     * Generic user
+     * @var XA\PlatformClient\Controller\User\XAUserGeneric
+     */
+    private static $userGeneric = null;
+
+    /**
+     * User environment
+     * @var XA\PlatformClient\Controller\User\XAUserEnvironment
+     */
+    private static $userEnvironment = null;
 
     public function __construct(array $parameters)
     {
@@ -98,10 +109,25 @@ class SWBootloader
         $core->setProvider($platformCredentials);
         $core->setCacheParameters($cacheDriverParameters);
         $core->connect();
-
-
     }
 
+    /**
+     * Gets instance of user environment
+     * @return PlatformClient\Controller\User\XAUserEnvironment
+     */
+    public static function getUserEnvironment()
+    {
+        return static::$userEnvironment;
+    }
+
+    /**
+     * Gets instance of generic user
+     * @return PlatformClient\Controller\User\XAUserGeneric
+     */
+    public static function getUserGeneric()
+    {
+        return self::$userGeneric;
+    }
 
 }
 
