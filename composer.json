@@ -1,0 +1,25 @@
+{
+  "name": "rev/swayemu-user",
+  "type": "library",
+  "description": "Emulates UserComponent of swayengine",
+  "keywords": [],
+  "authors": [
+    {
+      "name": "Reverze",
+      "email": "hawkmedia24@gmail.com"
+    }
+  ],
+  "license": "GPL-3.0",
+  "require": {
+    "rev/xa-platform-client ": "^0.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "extra":{
+    "dev-master": "dev"
+  }
+}
