@@ -2,8 +2,10 @@
 
 use XA\PlatformClient;
 
+
 class SWBootloader
 {
+
     public function __construct(array $parameters)
     {
         /**
@@ -17,6 +19,11 @@ class SWBootloader
 
     }
 
+    /**
+     * Bootstrap platform client
+     * @param array $parameters
+     * @throws Exception
+     */
     private function bootstrap(array $parameters)
     {
         /**

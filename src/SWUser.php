@@ -124,6 +124,18 @@ class SWUser
     public static $DefaultFlags = "z;";
 
 
+    /**
+     * @var XA\PlatformClient\Controller\User\XAUser
+     */
+    private $xaUser = null;
+
+
+    public function __construct()
+    {
+        if (empty($this->xaUser)){
+
+        }
+    }
 
 
 
