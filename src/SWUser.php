@@ -135,7 +135,7 @@ class SWUser
      */
     private function createXAUser() : XAUser
     {
-        $xaUser = new XAUser(\SWUserCore::getUserEnvironment(), \SWUserCore::getUserEnvironment());
+        $xaUser = new XAUser(\SWUserCore::getUserEnvironment(), \SWUserCore::getUserGeneric());
         return $xaUser;
     }
 
