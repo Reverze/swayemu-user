@@ -9,6 +9,7 @@
       "email": "hawkmedia24@gmail.com"
     }
   ],
+  "minimum-stability": "dev",
   "license": "GPL-3.0",
   "require": {
     "rev/xa-platform-client": "dev-dev"
