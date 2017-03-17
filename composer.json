@@ -15,9 +15,7 @@
     "rev/xa-platform-client": "dev-dev"
   },
   "autoload": {
-    "psr-4": {
-      "\\": "src/"
-    }
+    "classmap": [ "src/" ]
   },
   "minimum-stability": "dev",
   "extra":{
