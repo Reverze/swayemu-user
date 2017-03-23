@@ -109,6 +109,9 @@ class SWUserCore
         $core->setProvider($platformCredentials);
         $core->setCacheParameters($cacheDriverParameters);
         $core->connect();
+        
+        static::$userEnvironment = new PlatformClient\Controller\User\XAUserEnvironment();
+        static::$userGeneric = new PlatformClient\Controller\User\XAUserGeneric();
     }
 
     /**
