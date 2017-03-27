@@ -25,7 +25,7 @@ class SWUserStatement
      */
     public static function NickInUsing($nick)
     {
-        return \SWUserCore::getUserGeneric()->isUserNameAvailable($nick);
+        return !\SWUserCore::getUserGeneric()->isUserNameAvailable($nick);
     }
 
     /**
@@ -35,7 +35,7 @@ class SWUserStatement
      */
     public static function EmailInUsing($email)
     {
-        return \SWUserCore::getUserGeneric()->isEmailAddressAvailable($email);
+        return !\SWUserCore::getUserGeneric()->isEmailAddressAvailable($email);
     }
 
     public static function KeylogInUsing($keylog) : bool
