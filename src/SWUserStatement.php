@@ -140,7 +140,7 @@ class SWUserStatement
             return false;
         }
 
-        return $virtualUser->getEmailAddress();
+        return $virtualUser->getUserID();
     }
 
     /**
